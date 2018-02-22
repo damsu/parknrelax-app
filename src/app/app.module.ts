@@ -1,10 +1,18 @@
+import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ErrorHandler, NgModule } from '@angular/core';
-import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
-
+import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
+import { RentPage } from '../pages/rent/rent';
+import { LeasePage } from '../pages/lease/lease';
+import { SettingsPage } from '../pages/settings/settings';
+import { ProfilePage } from '../pages/profile/profile';
+import { MessagesPage } from '../pages/messages/messages';
+import { MessagesDetailsPage } from '../pages/messages-details/messages-details';
+import { RentDetailsPage } from '../pages/rent-details/rent-details';
+import { LoginPage } from '../pages/login/login';
+import { SignupPage } from '../pages/signup/signup';
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -13,17 +21,33 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   declarations: [
     MyApp,
     HomePage,
-    ListPage
+    RentPage,
+    LeasePage,
+    SettingsPage,
+    ProfilePage,
+    MessagesPage,
+    MessagesDetailsPage,
+    RentDetailsPage,
+    LoginPage,
+    SignupPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage
+    RentPage,
+    LeasePage,
+    SettingsPage,
+    ProfilePage,
+    MessagesPage,
+    MessagesDetailsPage,
+    RentDetailsPage,
+    LoginPage,
+    SignupPage
   ],
   providers: [
     StatusBar,
