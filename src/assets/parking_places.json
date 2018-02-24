@@ -1,0 +1,6 @@
+[{"id": 1, "address":"Isokatu 34", "type":"long-term"},
+{"id": 2, "address":"Jatulikivenkatu 18 A 1", "type":"long-term"},
+{"id": 3, "address":"Torikatu 10", "type":"long-term"},
+{"id": 4, "address":"Somekatu 36 B", "type":"instant"},
+{"id": 5, "address":"Another street 65 C", "type":"instant"},
+{"id": 6, "address":"Third street 65 B", "type":"instant"}]

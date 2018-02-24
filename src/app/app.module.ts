@@ -17,6 +17,10 @@ import { SignupPage } from '../pages/signup/signup';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import {HttpModule} from '@angular/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { DataServiceProvider } from '../providers/data-service/data-service';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -33,7 +37,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+	HttpModule,
+	 HttpClientModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -52,7 +58,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    DataServiceProvider
   ]
 })
 export class AppModule {}
