@@ -10,35 +10,39 @@
 </ion-header>
 <ion-content padding id="page5">
   <h4 id="rentDetails-heading2" style="color:#000000;">
-    Address line
+    {{address}}
   </h4>
   <img src="assets/img/9CPKNqJJS7upD94VcMzC_parkingspot.jpg" style="display:block;width:100%;height:auto;margin-left:auto;margin-right:auto;" />
-  <button id="rentDetails-button3" ion-button color="positive" block>
-    Contact
-  </button>
   <div id="rentDetails-markdown1" class="show-list-numbers-and-dots">
-    <p style="color:#000000;">
-      price, description, etc..
-    </p>
+    <h2 style="color:limegreen; padding-top:15px; text-align:center;">
+        {{price}} €/hour
+    </h2>
+      <p>Description: "{{description}}"</p>
+      <p style="text-align:center; background-color: limegreen; color: white">{{start_date}} - {{end_date}}</p>
+      <p style="text-align:center; background-color: limegreen; color: white">{{start_time}} - {{end_time}}</p>
   </div>
-  <img src="assets/img/9CPKNqJJS7upD94VcMzC_parkingspot.jpg" style="display:block;width:100%;height:auto;margin-left:auto;margin-right:auto;" />
-  <img src="assets/img/9CPKNqJJS7upD94VcMzC_parkingspot.jpg" style="display:block;width:100%;height:auto;margin-left:auto;margin-right:auto;" />
+    <button id="rentDetails-button4" ion-button color="positive" block>
+        RENT NOW
+    </button>
   <ion-list id="rentDetails-list3">
     <ion-item color="none" id="rentDetails-list-item8">
       <ion-thumbnail item-left>
-        <img />
+        <img src="../../assets/imgs/profilepic.jpg">
       </ion-thumbnail>
       <h2>
-        Name
+          {{username}}
       </h2>
+        <ion-item color="none" id="rentDetails-list-item9">
+            <ion-icon name="call" item-left></ion-icon>
+            phone number
+        </ion-item>
+        <ion-item color="none" id="rentDetails-list-item10">
+            <ion-icon name="mail" item-left></ion-icon>
+            mail
+        </ion-item>
     </ion-item>
-    <ion-item color="none" id="rentDetails-list-item9">
-      <ion-icon name="call" item-left></ion-icon>
-      phone number
-    </ion-item>
-    <ion-item color="none" id="rentDetails-list-item10">
-      <ion-icon name="mail" item-left></ion-icon>
-      mail
-    </ion-item>
+      <button id="rentDetails-button3" ion-button color="positive" block>
+          Contact
+      </button>
   </ion-list>
 </ion-content>

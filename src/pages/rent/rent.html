@@ -8,7 +8,7 @@
     </ion-title>
   </ion-navbar>
 </ion-header>
-<ion-content padding id="page2">
+<ion-content class="view" padding id="page2">
   <button style="width: 48%;" (click)='getItemsByType("instant")' id="rent-button1" ion-button outline color="positive" class=".rent-tab-btn">
     Instant
   </button>
@@ -19,12 +19,14 @@
 
   <ion-list>
 
-    <ion-item *ngFor="let item of data">
+    <ion-item *ngFor="let item of data" (click)="goToRentDetails(item)">
         <ion-thumbnail item-left>
           <img src="../../assets/imgs/map_loca.PNG">
         </ion-thumbnail>
         <h2>{{ item.address }}</h2>
         <p>{{ item.type }}</p>
+        <h3 style="font-weight: bold;">{{ item.username }}</h3>
+        <h3 style="color: limegreen;">{{ item.price }} €/hour</h3>
     </ion-item>
 
   </ion-list>

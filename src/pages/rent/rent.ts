@@ -38,7 +38,7 @@ filter: any;
   
   goToRentDetails(params){
     if (!params) params = {};
-    this.navCtrl.push(RentDetailsPage);
+    this.navCtrl.push(RentDetailsPage, params);
   }
   
   getItemsByAddress(searchbar) {
