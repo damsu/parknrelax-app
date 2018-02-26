@@ -21,26 +21,26 @@ filter: any;
   ) {
   }
   initializeItems() {
-	this.http.get('../../assets/parking_places.json')
+	this.http.get('https://parking-app-server.herokuapp.com/api/parking-places')
           .subscribe(data => {this.data = data;
 		  this.completeValidCall()});
   }
-  
+
   completeValidCall() {
 	this.loadedData = this.data;
 	this.filter = 'instant';
 	this.getItemsByType(this.filter);
 }
-  
+
   ionViewDidLoad() {
     this.initializeItems();
   }
-  
+
   goToRentDetails(params){
     if (!params) params = {};
     this.navCtrl.push(RentDetailsPage, params);
   }
-  
+
   getItemsByAddress(searchbar) {
   // Reset items back to all of the items
   this.data = this.loadedData;

@@ -21,7 +21,7 @@
       <p style="text-align:center; background-color: limegreen; color: white">{{start_date}} - {{end_date}}</p>
       <p style="text-align:center; background-color: limegreen; color: white">{{start_time}} - {{end_time}}</p>
   </div>
-    <button id="rentDetails-button4" ion-button color="positive" block>
+    <button id="rentDetails-button4" (click)="rentThePlace(id)" ion-button color="positive" block>
         RENT NOW
     </button>
   <ion-list id="rentDetails-list3">

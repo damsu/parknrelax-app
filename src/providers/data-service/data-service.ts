@@ -15,9 +15,9 @@ export class DataServiceProvider {
   }
   data: any;
   getParkingPlaces(){
-	  
+
     return new Promise(resolve => {
-        this.http.get('assets/parking_places.json')
+        this.http.get('https://parking-app-server.herokuapp.com/api/parking-places')
           .subscribe(data => this.data = data);
     });
   }
