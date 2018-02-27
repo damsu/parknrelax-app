@@ -14,9 +14,9 @@
       <ion-label>
         Address
       </ion-label>
-      <ion-input type="text" placeholder="Address"></ion-input>
+      <ion-input type="text" placeholder="Address" [(ngModel)]="address" [ngModelOptions]="{standalone: true}"></ion-input>
     </ion-item>
-    <ion-item id="lease-checkbox1">
+    <!--<ion-item id="lease-checkbox1">
       <ion-label>
         Monday
       </ion-label>
@@ -57,26 +57,34 @@
         Saturday
       </ion-label>
       <ion-checkbox></ion-checkbox>
+    </ion-item>-->
+    <ion-item>
+      <ion-label>Start Date</ion-label>
+      <ion-datetime displayFormat="MMM DD, YYYY" [(ngModel)]="startDate" [ngModelOptions]="{standalone: true}"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label>End Date</ion-label>
+      <ion-datetime displayFormat="MMM DD, YYYY" [(ngModel)]="endDate" [ngModelOptions]="{standalone: true}"></ion-datetime>
     </ion-item>
     <ion-item id="lease-input4">
       <ion-label>
         From
       </ion-label>
-      <ion-input type="time" placeholder=""></ion-input>
+        <ion-datetime displayFormat="HH:mm" [(ngModel)]="startTime" [ngModelOptions]="{standalone: true}"></ion-datetime>
     </ion-item>
     <ion-item id="lease-input5">
       <ion-label>
         To
       </ion-label>
-      <ion-input type="time" placeholder=""></ion-input>
+      <ion-datetime displayFormat="HH:mm" [(ngModel)]="endTime" [ngModelOptions]="{standalone: true}"></ion-datetime>
     </ion-item>
     <ion-item id="lease-input6">
       <ion-label>
         Price
       </ion-label>
-      <ion-input type="text" placeholder=""></ion-input>
+      <ion-input type="text" placeholder="" [(ngModel)]="price" [ngModelOptions]="{standalone: true}"></ion-input>
     </ion-item>
-    <button id="lease-button4" ion-button color="positive" block>
+    <button (click)="submitTheForm()" id="lease-button4" ion-button color="positive" block>
       Submit
     </button>
   </form>
