@@ -12,6 +12,7 @@ import { DataServiceProvider } from '../../providers/data-service/data-service';
 })
 export class HomePage {
   data:any;
+  leasingData: any;
   constructor(
     public navCtrl: NavController,
     private dataServiceProvider: DataServiceProvider,
@@ -21,11 +22,14 @@ export class HomePage {
   initializeItems() {
   this.http.get('https://parking-app-server.herokuapp.com/api/my-places')
           .subscribe(data => {this.data = data;});
+  this.http.get('https://parking-app-server.herokuapp.com/api/myleasing/DummyDemoUser')
+          .subscribe(data => {this.leasingData = data;});
   }
 
   ionViewDidLoad() {
     this.initializeItems();
   }
+  ionViewDidEnter() { this.initializeItems(); }
   goToRent(params){
     if (!params) params = {};
     this.navCtrl.push(RentPage);

@@ -31,4 +31,21 @@
     </ion-item>
 
   </ion-list>
+
+  <h4 id="home-heading4" style="color:#000000;">
+    I am leasing
+  </h4>
+  <ion-list>
+
+    <ion-item *ngFor="let item of leasingData" (click)="goToRentDetails(item)">
+        <ion-thumbnail item-left>
+          <img src="../../assets/imgs/map_loca.PNG">
+        </ion-thumbnail>
+        <h2>{{ item.address }}</h2>
+        <p>{{ item.type }}</p>
+        <h3 style="font-weight: bold;">{{ item.username }}</h3>
+        <h3 style="color: limegreen;">{{ item.price }} €/hour</h3>
+    </ion-item>
+
+  </ion-list>
 </ion-content>

@@ -33,6 +33,6 @@ export class LeasePage {
       headers: { 'Content-Type': 'application/json' }
     })
             .subscribe(data => {this.result = data;});
-    this.navCtrl.goToRoot(this.result);
+    this.navCtrl.popToRoot(this.result);
   }
 }

@@ -37,6 +37,6 @@ export class RentDetailsPage {
     rentThePlace(id){
       this.http.get('https://parking-app-server.herokuapp.com/api/add-place/'+id)
               .subscribe(data => {this.result = data;});
-      this.navCtrl.goToRoot(this.result);
+      this.navCtrl.popToRoot(this.result);
     }
 }
